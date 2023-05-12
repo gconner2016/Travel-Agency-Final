@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+:root {
+    --beige: #E6D5B8;
+    --orange: #E45826;
+    --black: #1B1A17;
+    --gold: #F0A500;
+    --font-family: 'Lato', sans-serif;
+    ;
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--beige);
+}
+
+
+/* css for checkout form page */
+
+.checkout_form {
+    max-width: 100%;
+    display: grid;
+    min-height: 100%;
+}
+
+.form_details {
+    margin: 5% auto;
+    padding: 3em;
+    background-color: #1b1a1738;
+}
+
+.heading {
+    font-family: var(--font-family);
+    color: var(--black);
+    margin-bottom: 7px;
+    font-size: 2em;
+}
+
+.text_styling {
+    font-family: var(--font-family);
+    padding: 4px;
+    margin: 4px 4px 2px 0px;
+    font-size: 1.2em;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+input {
+    border: 0;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 4px 7px 4px 0px;
+    height: 2.5em;
+    width: 27em;
+}
+
+.style_form {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+/* css for checkout form page */
+
+.btn {
+    border: none;
+    color: var(--black);
+    border-radius: 3px;
+    background-color: var(--gold);
+    font-family: var(--font-family);
+    font-weight: 600;
+    height: 35px;
+    width: 27em;
+    text-align: center;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--orange);
+    color: var(--beige);
+}

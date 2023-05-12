@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Information</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+
+</head>
+
+<body>
+    <form class="checkout_form" name="myform" id="form" onsubmit="successful()">
+        <div class="form_details">
+
+            <div class="style_form">
+                <div class="error"></div>
+                <h1 class="heading"><i class="fa fa-credit-card"></i> Payment Information</h1>
+                <label class="text_styling" for="name_on_card">Name:</label>
+                <input type="text" name="name_on_card" id="name" placeholder="" required>
+                <label class="text_styling" for="credit_card">Credit Card No:</label>
+                <input type="text" name="credit_card" id="credit_card" placeholder="" required oninvalid="this.setCustomValidity('Must contain 13 or more characters');" pattern=".{13,}" oninput="this.setCustomValidity('')">
+                <label class="text_styling" for="cvc">CVC:</label>
+                <input type="text" name="cvc" id="cvc" placeholder="" required>
+                <label class="text_styling" for="Card_expiration">Card Expiration Month:</label>
+                <input type="text" name="card_expiration" id="exp" placeholder="" required>
+                <input type="submit" class=" btn" value="PURCHASE"></input>
+                <button class=" btn " id="cart_button " type="button" onclick=" redirect_to_homepage()">BACK TO CART</button>
+            </div>
+
+        </div>
+    </form>
+
+    <script>
+        function successful() {
+            event.preventDefault();
+            swal("Purchase Successful", "Click the ok button!", "success");
+        }
+
+        function redirect_to_homepage() {
+            window.location.href = "base.html ";
+        }
+    </script>
+
+</body>
+
+</html>

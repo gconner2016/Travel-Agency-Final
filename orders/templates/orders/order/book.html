@@ -1,0 +1,33 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  Your shopping cart
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <div>
+        <div id="root"></div>
+        <div id="input-date">Seleted Date: </div>
+    </div>
+    <div id="timepicker">
+    </div>
+    <script src="{% static "js/timepicker.js" %}"></script>
+    <script src="{% static "js/book.js" %}"></script>
+    <script>
+        function checkout(url) {
+            if(selectDate != "" && picker.getTimeString() != "") {
+                location.href = url + "?date="+selectDate+"&time="+picker.getTimeString();
+            }
+        }
+    </script>
+</div>
+<p class="text-right" style="margin-top: 50px;">
+    <a href="{% url "shop:product_list" %}" class="button light">Continue shopping</a>
+    <a onclick="checkout('{% url "orders:order_create" %}')" class="button">
+      Checkout
+    </a>
+  </p>
+{% endblock %}
